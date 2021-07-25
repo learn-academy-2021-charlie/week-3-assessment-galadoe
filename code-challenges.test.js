@@ -36,15 +36,16 @@ describe("FibNum", () => {
 // b) Create the function that makes the test pass.
 function fibNum (num) {
   let fib = [0, 1]
-  let fibNumber = []
+  let fibNumber = [1]
 
   for(let i = 2; i <= num; i++){
     fib[i] = fib[i - 1] + fib[i - 2];
     fibNumber.push(fib[i]);
   }
+  console.log(fibNumber);
   return fibNumber;
 }
-console.log(fibNum(10));
+// console.log(fibNum(6));
 
 
 // --------------------2) Create a function that takes in an array and returns a new array of only odd numbers sorted from least to greatest.
@@ -95,8 +96,10 @@ describe("sum", () => {
   })
 })
 
+// b) Create the function that makes the test pass.
+
 //create a function that takes in an array
-//the array is iterated through
+//the array is iterated through (or try to use a higher order function to shorten the steps)
 //the previous index is compared to the next index
 //those two index are added and that number is saved and printed (as an array)
 //the saved num is add to the next num in the arrays and printed as well
@@ -105,8 +108,13 @@ describe("sum", () => {
 const arraySum = (arrayNum) => {
   let newSum = []
   let sum = 0
-
+  for(let i = 0; i < arrayNum.length; i++){
+    if(i == 0; newSum[i] = arrayNum[0])
+    else newSum[i] = newSum[i - 1] + arrayNum[0]
+    return newSum
+  }
 }
+console.log(arraySum(numbersToAdd1));
 
 var numbersToAdd1 = [2, 4, 45, 9]
 // Excpected output: [2, 6, 51, 60]
