@@ -34,6 +34,13 @@ describe("FibNum", () => {
 
 
 // b) Create the function that makes the test pass.
+
+//create a function that takes in num
+//have an empty array that will later take the ending result
+// create a loop that will help to create the sequence
+//push the sequence
+// return the array with the sequence
+
 function fibNum (num) {
   let fib = [0, 1]
   let fibNumber = [1]
@@ -42,10 +49,9 @@ function fibNum (num) {
     fib[i] = fib[i - 1] + fib[i - 2];
     fibNumber.push(fib[i]);
   }
-  console.log(fibNumber);
   return fibNumber;
 }
-// console.log(fibNum(6));
+console.log(fibNum(6));
 
 
 // --------------------2) Create a function that takes in an array and returns a new array of only odd numbers sorted from least to greatest.
@@ -91,7 +97,7 @@ console.log(leastToGreatest(fullArr2));
 describe("sum", () => {
   it("returns an array of accumlating sum", () => {
     expect(arraySum(numbersToAdd1)).toEqual([2, 6, 51, 60])
-    expect(arraySum(numbersToAdd2)).toEqual([0, 7, -8, 12])
+    expect(arraySum(numbersToAdd2)).toEqual([0, 7, -1, 11])
     expect(arraySum(numbersToAdd3)).toEqual([])
   })
 })
@@ -108,13 +114,14 @@ describe("sum", () => {
 const arraySum = (arrayNum) => {
   let newSum = []
   let sum = 0
-  for(let i = 0; i < arrayNum.length; i++){
-    if(i == 0; newSum[i] = arrayNum[0])
-    else newSum[i] = newSum[i - 1] + arrayNum[0]
-    return newSum
+  for(let i = 1; i < arrayNum.length; i++){
+    if(i === 0){
+      newSum[i] = arrayNum[i]
+    }
   }
+  return newSum
 }
-console.log(arraySum(numbersToAdd1));
+// console.log(arraySum(numbersToAdd1));
 
 var numbersToAdd1 = [2, 4, 45, 9]
 // Excpected output: [2, 6, 51, 60]
