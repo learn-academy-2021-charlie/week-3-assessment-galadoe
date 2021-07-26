@@ -113,15 +113,16 @@ describe("sum", () => {
 
 const arraySum = (arrayNum) => {
   let newSum = []
-  let sum = 0
   for(let i = 1; i < arrayNum.length; i++){
     if(i === 0){
       newSum[i] = arrayNum[i]
+      // newSum[i] = newSum[i - 1] + arrayNum[i]
     }
   }
   return newSum
 }
-// console.log(arraySum(numbersToAdd1));
+console.log(arraySum([2, 4, 45, 9]));
+
 
 var numbersToAdd1 = [2, 4, 45, 9]
 // Excpected output: [2, 6, 51, 60]
@@ -131,7 +132,3 @@ var numbersToAdd2 = [0, 7, -8, 12]
 
 var numbersToAdd3 = []
 // Expected output: []
-
-
-
-// b) Create the function that makes the test pass.
