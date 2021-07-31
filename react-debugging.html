@@ -48,6 +48,7 @@
         }
 
         // No need to change anything ABOVE this line ^
+
         render(){
           return(
             <>
@@ -55,6 +56,7 @@
               <Card
                 drawCard={this.drawCard}
                 shuffle={this.shuffle}
+                hand = {this.state.hand}
               />
             </>
           )
@@ -79,10 +81,12 @@
           }
           return(
             <>
-              <button onClick={}>
+            //We were trying to access the props hand when we hadn't created a props through the card component call in the App
+            //also for the onClick, it didn't work because we weren't calling it correctly. It was already being access in the card component in the app, but we weren't calling it as a props in the child component
+              <button onClick={this.props.drawCard}>
                 Click to Draw a Card
               </button>
-              <button onClick={shuffle}>
+              <button onClick={this.props.shuffle}>
                 Return Cards and Shuffle Deck
               </button>
               <div style={handStyles}>
@@ -94,7 +98,7 @@
                   )
                 })}
               </div>
-            </>
+          </>
           )
         }
       }
